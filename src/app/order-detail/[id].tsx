@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, Pressable, ScrollView, Image } from 'react-native';
-import Animated, { FadeInDown, Layout } from 'react-native-reanimated';
+import Animated, { FadeInDown } from 'react-native-reanimated';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useStore } from '../../context/StoreContext';
@@ -14,10 +14,6 @@ import {
   X, 
   ChevronRight,
   Calendar,
-  Clock,
-  IndianRupee,
-  ShoppingBag,
-  ChefHat
 } from 'lucide-react-native';
 
 export default function OrderDetailScreen() {

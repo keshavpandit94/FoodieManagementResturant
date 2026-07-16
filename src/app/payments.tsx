@@ -7,12 +7,10 @@ import { useTheme } from '../hooks/use-theme';
 import Animated, { FadeInDown, Layout } from 'react-native-reanimated';
 import { 
   ArrowLeft, 
-  CreditCard, 
   TrendingUp, 
   CheckCircle, 
   ChevronRight, 
   X, 
-  Send,
   ArrowRight,
   Briefcase
 } from 'lucide-react-native';
@@ -30,13 +28,10 @@ export default function PaymentsScreen() {
   const [accountNumber, setAccountNumber] = useState('•••• •••• 9876');
   const [ifscCode, setIfscCode] = useState('HDFC0000123');
 
-  // Calculate totals
-  const totalVolume = payments
-    .filter(p => p.status === 'Completed')
-    .reduce((sum, p) => sum + p.amount, 0);
+
 
   const pendingSettlement = 850; // mock static pending (₹)
-  const settledBalance = totalVolume;
+
 
   const handleRequestSettlement = () => {
     setSettleModalVisible(true);

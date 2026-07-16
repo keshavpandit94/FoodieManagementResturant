@@ -10,7 +10,7 @@ function TabIcon({ children, focused }: { children: React.ReactNode; focused: bo
 
   useEffect(() => {
     scale.value = withSpring(focused ? 1.15 : 1, { damping: 12, stiffness: 120 });
-  }, [focused]);
+  }, [focused, scale]);
 
   const animatedStyle = useAnimatedStyle(() => {
     return {

@@ -1,56 +1,110 @@
-# Welcome to your Expo app 👋
+# 🍽️ Foodies Manager — Companion Kitchen App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Foodies Manager is a premium, state-of-the-art mobile and web companion application built using React Native and Expo. It is designed specifically for home-based cooks, micro cloud kitchens, and tiffin centers to connect to the Foodies App delivery network and control their day-to-day culinary operations.
 
-## Get started
+---
 
-1. Install dependencies
+## 🚀 Key Features
 
-   ```bash
-   npm install
-   ```
+*   **📊 Live Operations Dashboard:** A real-time dashboard featuring outlet selection, pending order checklists, low-stock inventory alerts, active delivery partner monitors, and daily statistics.
+*   **🛒 Order Lifecycle Management:** Complete control over order status flows (`Pending` ➔ `Preparing` ➔ `Ready` ➔ `Delivered` ➔ `Cancelled`) with detail logs, customer contact integrations, and live updates.
+*   **🍲 Menu & Culinary Control:** CRUD capabilities for menu items complete with preparation time, price, description, category filterings (`Tiffin`, `Lunch Box`, `Mains`, `Snacks`, `Sweets`, `Beverages`), and availability toggles.
+*   **💳 Settlements & Payouts Dashboard:** Unsettled payouts logs, instant manual settlement triggers, and interactive bank account information managers (HDFC bank default demo setup).
+*   **📦 Inventory & Stock Alerts:** Low-stock threshold trackers detailing current quantities, restocking alerts, and automated replenishment schedules.
+*   **🏷️ Promo Coupon Engine:** Active coupon control panel supporting custom discount codes, percentage cutoffs, minimum order criteria, and expiration thresholds.
+*   **🏢 Multi-Outlet kitchen management:** Toggles operational status (`Open` / `Closed`) and custom kitchen timings for different kitchen branches in real-time.
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## 🛠️ Technology Stack
 
-In the output, you'll find options to open the app in a
+*   **Core Framework:** [Expo SDK 57](https://expo.dev) & [React Native 0.86](https://reactnative.dev) (supporting file-based Routing via `expo-router`)
+*   **Language:** [TypeScript](https://www.typescriptlang.org/) for robust type safety
+*   **Design & Styling:** [NativeWind v5](https://nativewind.dev) (utilizing Tailwind CSS v4 engines) for high-performance responsive utility layout styling
+*   **Animations:** [React Native Reanimated v4](https://docs.swmansion.com/react-native-reanimated/) for ultra-smooth micro-animations, springs, and layouts
+*   **Icons:** [Lucide React Native](https://lucide.dev)
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 📂 Project Structure
 
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```text
+src/
+├── app/                  # File-based router screen layouts
+│   ├── (tabs)/           # Main navigation tabs (Home, Orders, Menu, Delivery, More)
+│   ├── order-detail/     # Live order monitoring detail page
+│   ├── coupons.tsx       # Coupon code management system
+│   ├── inventory.tsx     # Smart inventory item tracker
+│   ├── outlets.tsx       # Multi-outlet details & switcher
+│   ├── payments.tsx      # Bank details & transaction settlements log
+│   ├── profile.tsx       # Seller personal identity documents & details
+│   ├── settings.tsx      # Dark mode toggles & app configuration
+│   └── _layout.tsx       # Root entry & auth guard routing index
+├── components/           # Reusable UI controls (Welcome, Themed components, animated tabs)
+├── constants/            # Theme designs & colors configurations
+├── context/              # Global application React Store Context (StoreContext)
+├── data/                 # Static mock data payloads for testing
+├── hooks/                # Custom React hooks (useTheme, etc.)
+└── types.ts              # Global typescript declarations and data structures
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-### Other setup steps
+## ⚙️ Getting Started
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+### Prerequisites
 
-## Learn more
+Ensure you have [Node.js](https://nodejs.org) installed on your development machine.
 
-To learn more about developing your project with Expo, look at the following resources:
+### Installation
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+1. Clone this repository to your local directory.
+2. Install all dependencies:
+    ```bash
+    npm install
+    ```
 
-## Join the community
+### Running the App
 
-Join our community of developers creating universal apps.
+Start the Expo bundler:
+```bash
+npm run start
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+For specific platform runtimes:
+
+*   **Web Client (Vite / React Native Web):**
+    ```bash
+    npm run web
+    ```
+*   **Android Emulator:**
+    ```bash
+    npm run android
+    ```
+*   **iOS Simulator:**
+    ```bash
+    npm run ios
+    ```
+
+---
+
+## 🧪 Quality and Standards
+
+This codebase maintains absolute compliance with rigorous code styling rules:
+
+*   **TypeScript Checks:** No compilation or type warnings. Run validation using:
+    ```bash
+    npx tsc --noEmit
+    ```
+*   **Linter Checks:** Zero warnings or errors. Validate matching style criteria using:
+    ```bash
+    npm run lint
+    ```
+
+---
+
+## 📄 License & Copyright
+
+Copyright © 2026 **Keshav Pandit**. All rights reserved.
+
+Licensed under the [MIT License](LICENSE) (see the LICENSE file for details).
